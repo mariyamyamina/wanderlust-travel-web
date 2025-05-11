@@ -1,13 +1,10 @@
 mapboxgl.accessToken = mapToken;
 
-// Only create map if geometry exists
-if (listing.geometry && listing.geometry.coordinates) {
-   
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/streets-v11",
     center: listing.geometry.coordinates,
-    zoom: 4,
+    zoom: 8,
   });
 
   // Create popup
@@ -19,7 +16,4 @@ if (listing.geometry && listing.geometry.coordinates) {
     .setLngLat(listing.geometry.coordinates)
     .setPopup(popup)
     .addTo(map);
-} else {
-  console.log("Geometry exists", listing.geometry);
-  console.warn("Map not initialized: Missing geometry data for this listing.");
-}
+
