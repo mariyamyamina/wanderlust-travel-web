@@ -74,6 +74,10 @@ passport.deserializeUser(User.deserializeUser());
 //     console.dir(req.cookies);
 //     res.send("Server working");
 // })
+app.get("/", (req, res) => {
+  res.redirect("/listings"); // or /listing (check spelling)
+});
+
 
 app.use((req,res,next)=>{
     res.locals.success = req.flash("success");
