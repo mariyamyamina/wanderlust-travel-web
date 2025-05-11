@@ -47,7 +47,7 @@ const initDB = async () => {
   // Add owner and dynamic geometry with coordinates from Mapbox API
   for (let obj of initData.data) {
     const coords = await getCoordinates(obj.location);
-    obj.owner = "681a205dbe14285b06f54783";
+    obj.owner = "6820757659724001c5915306";
     obj.geometry = {
       type: "Point",
       coordinates: coords,
