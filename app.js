@@ -74,6 +74,13 @@ passport.deserializeUser(User.deserializeUser());
 //     console.dir(req.cookies);
 //     res.send("Server working");
 // })
+
+// In Express (app.js)
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(__dirname + '/public/favicon.ico');
+});
+
+
 app.get("/", (req, res) => {
   res.redirect("/listings"); // or /listing (check spelling)
 });
