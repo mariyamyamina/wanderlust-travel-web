@@ -39,6 +39,17 @@ module.exports.createListing = async (req, res) => {
   res.redirect("/listings");
 };
 
+module.exports.categoryListing=async(req,res)=>{
+   const { category } = req.params;
+    try {
+        const listings = await Listing.find({ category });
+        res.render('listings/index', { allListings: listings, categoryName: category });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Error loading category listings");
+    }
+};
+
 module.exports.editListing = async (req, res) => {
   let { id } = req.params;
   const listing = await Listing.findById(id);

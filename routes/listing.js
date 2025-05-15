@@ -17,7 +17,9 @@ router.route("/")
   // })
   
 //Create Listing Route
-router.get("/new",isLoggedIn,listingController.renderNewForm)
+router.get("/new",isLoggedIn,listingController.renderNewForm);
+
+router.get("/category/:category",isLoggedIn,wrapAsync(listingController.categoryListing))
 
 //Edit  route
 router.get("/:id/edit",isLoggedIn,isOwner,wrapAsync(listingController.editListing));

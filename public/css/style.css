@@ -105,15 +105,19 @@ body{
         flex-wrap:wrap;
         align-items:center;
     }
+    #filters a{
+        text-decoration:none;
+        color:#222222;
+        opacity:0.7;
+    }
+    #filters a:hover{
+        opacity:1;
+        cursor:pointer;
+    }
     .filter{
           margin-top:2rem;
           text-align:center;
           margin-right:2.4rem;
-          opacity:0.7;
-    }
-    .filter:hover{
-        opacity:1;
-        cursor:pointer;
     }
     .filter p{
         font-size:0.8rem;
