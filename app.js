@@ -9,9 +9,9 @@ const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError");
 const session = require("express-session");
-const MongoStore=require("connect-mongo");
-const flash = require("connect-flash");
-const passport = require("passport");
+const MongoStore=require("connect-mongo"); //store session data in MongoDB when using Express sessions.
+const flash = require("connect-flash");  // To flash messages success and error
+const passport = require("passport");  //For Authentication
 const localStrategy = require("passport-local");
 const User = require("./models/user")
 
