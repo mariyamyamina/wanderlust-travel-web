@@ -48,7 +48,7 @@ module.exports.categoryListing=async(req,res)=>{
         console.error(err);
         res.status(500).send("Error loading category listings");
     }
-};
+}
 
 module.exports.editListing = async (req, res) => {
   let { id } = req.params;
