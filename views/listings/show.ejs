@@ -62,18 +62,19 @@
             <div class="invalid-feedback">Please write some comments for review</div>
           </div>
 
-          <button class="btn btn-outline-dark">Submit</button>
+          <button class="btn btn-outline-dark mb-3">Submit</button>
+          <hr>
         </form>
       <% } %>
 
       <% if (listing.reviews.length > 0) { %>
-        <hr>
-        <p><strong>All Reviews</strong></p>
-        <div class="row">
+        
+        <p class="col-12 col-md-8 my-3"><strong>All Reviews</strong></p>
+        <div class="row col-12 col-md-8 my-3">
           <% for (review of listing.reviews) { %>
             <div class="card col-12 col-md-5 ms-md-3 mb-3">
               <div class="card-body">
-                <h5 class="card-title"><%= review.author.username %></h5>
+                <h5 class="card-title mt-3"><i><%= review.author.username %></i></h5>
                 <p class="card-text"><%= review.comment %></p>
                 <p class="starability-result" data-rating="<%= review.rating %>"></p>
               </div>
